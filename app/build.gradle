@@ -6,6 +6,8 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+    apply plugin: 'kotlin-android-extensions'
+    apply plugin: 'kotlin-kapt'
 
     defaultConfig {
         applicationId "br.com.aluno.usingsomeapis"
@@ -38,7 +40,13 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def nav_version = "2.3.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
