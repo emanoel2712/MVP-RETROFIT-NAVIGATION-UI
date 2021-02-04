@@ -22,8 +22,22 @@ class CardAdapter(private val contextIn: Context, private val cardListIn: List<C
             when (it.cID) {
 
                 1 -> {
-                    holder.nameCard.text = "GIFS Animados"
-                    holder.ivCard.setImageResource(R.drawable.bg_main_menu)
+
+                    holder.nameCard.setTextColor(ContextCompat.getColor(contextIn, R.color.white))
+                    holder.nameCard.setText(R.string.see_favorite_anime)
+                    holder.nameCard.setBackgroundColor(
+                        ContextCompat.getColor(
+                            contextIn,
+                            R.color.colorBottomIMGAnime
+                        )
+                    )
+                    holder.ivCard.setImageResource(R.drawable.ic_anime)
+                    holder.ivCard.setBackgroundColor(
+                        ContextCompat.getColor(
+                            contextIn,
+                            R.color.black
+                        )
+                    )
                 }
 
                 2 -> {

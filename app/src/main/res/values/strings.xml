@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">UsingSomeAPIs</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="see_favorite_anime">Veja seus animes favoritos</string>
 </resources>

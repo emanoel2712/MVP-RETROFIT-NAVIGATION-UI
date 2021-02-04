@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorGray"
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
@@ -21,21 +22,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCard"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY" />
 
             <TextView
                 android:id="@+id/nameCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center" />
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="TESTANDOOOO"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
