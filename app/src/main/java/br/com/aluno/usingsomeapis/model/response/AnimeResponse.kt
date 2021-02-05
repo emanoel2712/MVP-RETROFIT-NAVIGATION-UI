@@ -13,3 +13,12 @@ data class AnimeResponse(
     @SerializedName("results")
     var anListIn: List<Anime>? = null,
 )
+
+data class AnimeEpisodesResponse(
+    @SerializedName("request_hash")
+    var anRequestHash: String? = null,
+    @SerializedName("request_cached")
+    var anRequestCached: Boolean? = null,
+    @SerializedName("request_cache_expiry")
+    var anRequestCacheExpiry: String? = null,
+)
