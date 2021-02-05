@@ -15,7 +15,6 @@ import br.com.aluno.usingsomeapis.resource.extensions.localized
 import br.com.aluno.usingsomeapis.view.activitiy.BaseActivity
 import br.com.aluno.usingsomeapis.view.adapter.AnimeEpisodeAdapter
 import kotlinx.android.synthetic.main.fragment_anime_episodes.*
-import org.jsoup.select.Elements
 
 class AnimeEpisodesFragment : Fragment() {
 
