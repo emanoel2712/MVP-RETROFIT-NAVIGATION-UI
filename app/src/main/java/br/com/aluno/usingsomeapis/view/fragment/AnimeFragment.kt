@@ -52,10 +52,8 @@ class AnimeFragment : Fragment() {
 
     private fun setupListeners() {
         AnimePresenter.sharedInstance.mAnimeList.bind {
-            Handler(Looper.getMainLooper()).postDelayed({
-                this.hideLoading()
-                this.setupAnimesRV()
-            }, 1000)
+            this.hideLoading()
+            this.setupAnimesRV()
         }
 
         this.showLoading()
