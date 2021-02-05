@@ -20,6 +20,17 @@
     <fragment
         android:id="@+id/AnimeFragment"
         android:name="br.com.aluno.usingsomeapis.view.fragment.AnimeFragment"
-        tools:layout="@layout/fragment_anime" />
+        tools:layout="@layout/fragment_anime">
+
+        <action
+            android:id="@+id/action_anime_to_anime_detail"
+            app:destination="@+id/AnimeDetail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AnimeDetail"
+        android:name="br.com.aluno.usingsomeapis.view.fragment.AnimeDetailFragment"
+        tools:layout="@layout/fragment_detail_anime" />
 
 </navigation>

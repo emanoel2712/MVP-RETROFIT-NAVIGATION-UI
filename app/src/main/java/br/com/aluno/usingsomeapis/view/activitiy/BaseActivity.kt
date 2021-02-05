@@ -15,14 +15,14 @@ open class BaseActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    fun setupNavBar(titleIn: Int, withBackBtn: Boolean, bgColorIn: Int, tvColorIn: Int) {
+    fun setupNavBar(titleIn: String, withBackBtn: Boolean, bgColorIn: Int, tvColorIn: Int) {
 
         window.statusBarColor = bgColorIn
         this.toolbar.visibility = View.VISIBLE
 
-        this.toolbar.mTitle.setText(titleIn)
-        this.toolbar.setBackgroundColor(bgColorIn)
-        this.toolbar.mTitle.setTextColor(tvColorIn)
+        this.toolbar.mTitle.text = titleIn
+        this.toolbar.setBackgroundColor(ContextCompat.getColor(this, bgColorIn))
+        this.toolbar.mTitle.setTextColor(ContextCompat.getColor(this, tvColorIn))
 
         this.toolbar.navBackBtn.visibility = View.GONE
         if (withBackBtn) {

@@ -1,14 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.DetailAnimeFragment">
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".view.fragment.AnimeDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAnimeDetailIMG"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:backgroundTint="@color/white"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_anime" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorMainDark">
+
+                        <TextView
+                            android:id="@+id/tvScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Score"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvRanked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Ranked"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/tvScore"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQtdEpisodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Episodes"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/tvRanked"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvScoreInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="7.1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvScore"
+                            app:layout_constraintTop_toBottomOf="@+id/tvScore" />
+
+                        <TextView
+                            android:id="@+id/tvRankedInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="#662"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/tvRanked"
+                            app:layout_constraintTop_toBottomOf="@+id/tvRanked" />
+
+                        <TextView
+                            android:id="@+id/tvQtdEpisodesInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="#2"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/tvQtdEpisodes"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQtdEpisodes" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/colorGray"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSynopse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:scrollbars="vertical"
+                        android:text="Sinopse:"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvSynopseInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="40dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/colorMainDark"
+                android:text="VER EPISÓDIOS"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_movie_player"
+                app:iconGravity="end"
+                app:iconSize="50dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

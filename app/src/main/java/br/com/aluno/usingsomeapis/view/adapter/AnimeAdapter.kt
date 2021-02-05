@@ -25,7 +25,7 @@ class AnimeAdapter(private val contextIn: Context, private val animeListIn: List
             holder.tvAnimeName.text = animeIn.anTitle
 
             holder.itemView.setOnClickListener {
-                mAnimeInfo(animeIn)
+                this.mAnimeInfo(animeIn)
             }
         }
     }

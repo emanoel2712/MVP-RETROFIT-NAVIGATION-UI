@@ -10,11 +10,13 @@ import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.aluno.usingsomeapis.R
 import br.com.aluno.usingsomeapis.presenter.AnimePresenter
 import br.com.aluno.usingsomeapis.resource.extensions.hideLoading
+import br.com.aluno.usingsomeapis.resource.extensions.localized
 import br.com.aluno.usingsomeapis.resource.extensions.showLoading
 import br.com.aluno.usingsomeapis.view.activitiy.BaseActivity
 import br.com.aluno.usingsomeapis.view.adapter.AnimeAdapter
@@ -37,13 +39,13 @@ class AnimeFragment : Fragment() {
 
     private fun setupUI() {
         (requireActivity() as BaseActivity).setupNavBar(
-            R.string.animes,
+            R.string.animes.localized(),
             true,
-            ContextCompat.getColor(requireContext(), R.color.colorMainDark),
+            R.color.colorMainDark,
             R.color.white
         )
-        this.setupAnimesRV()
         this.setupListeners()
+        this.setupAnimesRV()
         this.clickBtnSearch()
         this.editClickInNext()
     }
@@ -70,6 +72,7 @@ class AnimeFragment : Fragment() {
 
         mAnimeAdapter?.mAnimeInfo = {
             AnimePresenter.sharedInstance.mAnimeSelected.value = it
+            this.findNavController().navigate(AnimeFragmentDirections.actionAnimeToAnimeDetail())
         }
 
         this.rvAnimes.layoutManager = mLayoutManager

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import br.com.aluno.usingsomeapis.R
 import br.com.aluno.usingsomeapis.presenter.GlobalPresenter
+import br.com.aluno.usingsomeapis.resource.utils.MainContext
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.toolbar
@@ -28,6 +29,8 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupUI() {
+        MainContext.context = applicationContext
+
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.colorMain)
         this.toolbar.visibility = View.GONE
     }
