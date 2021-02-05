@@ -1,6 +1,6 @@
 # UsingSomeAPis
 
-APP Android em desenvolvimento, será um app que irá consumir algumas API's e o padrão de arquitetura é MVP
+APP Android em desenvolvimento, será um app que irá consumir algumas API's. Padrão de arquitetura: MVP
 
 # Tecnologias utilizadas por enquanto
 Retrofit, Gson, Okhttp, Picasso, Material Design, MeowBottomNavigation, Navigation-UI
