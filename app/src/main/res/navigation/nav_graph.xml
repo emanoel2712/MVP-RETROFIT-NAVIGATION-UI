@@ -3,11 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/mainMenuFragment">
+    app:startDestination="@id/MainMenuFragment">
 
     <fragment
-        android:id="@+id/mainMenuFragment"
+        android:id="@+id/MainMenuFragment"
         android:name="br.com.aluno.usingsomeapis.view.fragment.MainMenuFragment"
-        tools:layout="@layout/fragment_main_menu" />
+        android:label="main_fragment"
+        app:defaultNavHost="true"
+        tools:layout="@layout/fragment_main_menu">
+
+        <action
+            android:id="@+id/action_main_menu_to_anime"
+            app:destination="@+id/AnimeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AnimeFragment"
+        android:name="br.com.aluno.usingsomeapis.view.fragment.AnimeFragment"
+        tools:layout="@layout/fragment_anime" />
 
 </navigation>

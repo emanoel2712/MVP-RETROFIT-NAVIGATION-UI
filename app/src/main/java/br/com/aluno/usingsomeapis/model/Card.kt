@@ -1,6 +1,6 @@
 package br.com.aluno.usingsomeapis.model
 
 data class Card(
-    var cID: Int?,
-    var cName: String?
+    var cID: Int? = null,
+    var cName: String? = null
 )

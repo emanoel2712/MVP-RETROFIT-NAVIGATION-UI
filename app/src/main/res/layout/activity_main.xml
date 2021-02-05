@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:background="@color/colorMainDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:mbn_backgroundBottomColor="@color/colorMain"
         app:mbn_countBackgroundColor="#ff6f00"

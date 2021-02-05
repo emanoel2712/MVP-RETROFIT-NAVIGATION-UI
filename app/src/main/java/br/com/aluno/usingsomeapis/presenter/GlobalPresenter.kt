@@ -3,6 +3,7 @@ package br.com.aluno.usingsomeapis.presenter
 import androidx.navigation.fragment.NavHostFragment
 import br.com.aluno.usingsomeapis.R
 import br.com.aluno.usingsomeapis.model.Card
+import br.com.aluno.usingsomeapis.resource.utils.DynamicType
 
 class GlobalPresenter {
 
@@ -11,9 +12,8 @@ class GlobalPresenter {
     }
 
     val navHostFragment = NavHostFragment.create(R.navigation.nav_graph)
-    var listCards: List<Card> = listOf()
+    var mCardList: DynamicType<List<Card>> =
+        DynamicType(listOf(Card(1, "GIF"), Card(2, "Cats"), Card(3, "Dogs")))
+    var mCardSelected: DynamicType<Card> = DynamicType(Card())
 
-    fun generateCards() {
-        this.listCards = listOf(Card(1, "GIF"), Card(2, "Cats"), Card(3, "Dogs"))
-    }
 }

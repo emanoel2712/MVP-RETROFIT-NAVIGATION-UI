@@ -4,30 +4,30 @@ import com.google.gson.annotations.SerializedName
 
 data class Anime(
     @SerializedName("mal_id")
-    var anID: Int?,
+    var anID: Int? = null,
     @SerializedName("url")
-    var anURL: String?,
+    var anURL: String? = null,
     @SerializedName("image_url")
-    var anIMG_URL: String?,
+    var anIMG_URL: String? = null,
     @SerializedName("title")
-    var anTitle: String?,
+    var anTitle: String? = null,
     @SerializedName("airing")
-    var anAiring: Boolean?,
+    var anAiring: Boolean? = null,
     @SerializedName("synopsis")
-    var anSynopse: String?,
+    var anSynopse: String? = null,
     @SerializedName("type")
-    var anType: String?,
+    var anType: String? = null,
     @SerializedName("episodes")
-    var anQtdEpisodes: Int?,
+    var anQtdEpisodes: Int? = null,
     @SerializedName("score")
-    var anScore: Double?,
+    var anScore: Double? = null,
     @SerializedName("start_date")
-    var anStartDate: String?,
+    var anStartDate: String? = null,
     @SerializedName("end_date")
-    var anEndDate: String?,
+    var anEndDate: String? = null,
     @SerializedName("members")
-    var anQtdMembers: Double?,
+    var anQtdMembers: Double? = null,
     @SerializedName("rated")
-    var anRated: String?
+    var anRated: String? = null
 ) {
 }

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@null"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@null">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -14,7 +14,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,26 +21,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivCard"
+                android:id="@+id/ivAnimeIMG"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_anime"
                 android:scaleType="fitXY" />
 
             <TextView
-                android:id="@+id/nameCard"
+                android:id="@+id/tvAnimeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="TESTANDOOOO"
-                android:textSize="15dp"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textStyle="bold" />
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:text="Naruto Shippuden"
+                android:textAlignment="center" />
+
+
         </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

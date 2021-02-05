@@ -9,8 +9,9 @@
     <color name="white">#EFEEEE</color>
 
 
-    <color name="colorMain">#FF448AFF</color>
+    <color name="colorMain">#182B59</color>
+    <color name="colorMainDark">#131849</color>
     <color name="colorBottomIMGAnime">#864754</color>
-    <color name="colorGray">#D8D3D3</color>
+    <color name="colorGray">#CBD0DA</color>
 
 </resources>

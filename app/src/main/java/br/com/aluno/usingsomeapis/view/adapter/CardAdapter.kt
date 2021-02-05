@@ -15,11 +15,13 @@ import kotlinx.android.synthetic.main.adapter_card.view.*
 class CardAdapter(private val contextIn: Context, private val cardListIn: List<Card>) :
     RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
+    var clickInfoCard: (cardIn: Card) -> Unit = { }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        this.cardListIn[position].let {
+        this.cardListIn[position].let { cardIn ->
 
-            when (it.cID) {
+            when (cardIn.cID) {
 
                 1 -> {
 
@@ -52,6 +54,10 @@ class CardAdapter(private val contextIn: Context, private val cardListIn: List<C
                 4 -> {
 
                 }
+            }
+
+            holder.itemView.setOnClickListener {
+                this.clickInfoCard(cardIn)
             }
         }
     }

@@ -8,8 +8,10 @@ import br.com.aluno.usingsomeapis.R
 import br.com.aluno.usingsomeapis.presenter.GlobalPresenter
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.toolbar
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     companion object {
         const val ID_HOME = 101
