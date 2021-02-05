@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import br.com.aluno.usingsomeapis.R
 import br.com.aluno.usingsomeapis.presenter.AnimePresenter
 import br.com.aluno.usingsomeapis.view.activitiy.BaseActivity
@@ -33,15 +34,25 @@ class AnimeDetailFragment : Fragment() {
             R.color.white
         )
         this.settingInfoAnimeInUI()
+        this.clickBtnEpisodes()
     }
 
     private fun settingInfoAnimeInUI() {
         Picasso.get().load(AnimePresenter.sharedInstance.mAnimeSelected.value.anIMG_URL)
             .into(ivAnimeDetailIMG)
 
-        this.tvScoreInfo.text = AnimePresenter.sharedInstance.mAnimeSelected.value.anScore.toString()
-        this.tvRankedInfo.text = AnimePresenter.sharedInstance.mAnimeSelected.value.anRated.toString()
-        this.tvQtdEpisodesInfo.text = AnimePresenter.sharedInstance.mAnimeSelected.value.anQtdEpisodes.toString()
+        this.tvScoreInfo.text =
+            AnimePresenter.sharedInstance.mAnimeSelected.value.anScore.toString()
+        this.tvRankedInfo.text =
+            AnimePresenter.sharedInstance.mAnimeSelected.value.anRated.toString()
+        this.tvQtdEpisodesInfo.text =
+            AnimePresenter.sharedInstance.mAnimeSelected.value.anQtdEpisodes.toString()
         this.tvSynopseInfo.text = AnimePresenter.sharedInstance.mAnimeSelected.value.anSynopse
+    }
+
+    private fun clickBtnEpisodes() {
+        this.btnSeeEpisodes.setOnClickListener {
+            this.findNavController().navigate(AnimeDetailFragmentDirections.actionAnimeDetailToAnimeEpisodes())
+        }
     }
 }
