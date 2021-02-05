@@ -14,3 +14,5 @@ Caso queira testar o APK, path: app\release
 ![Screenshot_1612495395](https://user-images.githubusercontent.com/45019357/106986528-4bb00600-674a-11eb-8d01-784870e458e9.png)
 ![Screenshot_1612495412](https://user-images.githubusercontent.com/45019357/106986532-4d79c980-674a-11eb-8c45-8bce05e63c77.png)
 ![Screenshot_1612495419](https://user-images.githubusercontent.com/45019357/106986533-4f438d00-674a-11eb-9e3a-42866bc85d11.png)
+![Screenshot_1612568972](https://user-images.githubusercontent.com/45019357/107100722-faf4e780-67f3-11eb-947c-0ae2e2b580e7.png)
+
