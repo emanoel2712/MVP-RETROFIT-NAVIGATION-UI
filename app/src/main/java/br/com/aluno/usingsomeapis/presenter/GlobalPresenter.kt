@@ -13,7 +13,7 @@ class GlobalPresenter {
 
     val navHostFragment = NavHostFragment.create(R.navigation.nav_graph)
     var mCardList: DynamicType<List<Card>> =
-        DynamicType(listOf(Card(1, "GIF"), Card(2, "Cats"), Card(3, "Dogs")))
+        DynamicType(listOf(Card(1, "ANIME")))
     var mCardSelected: DynamicType<Card> = DynamicType(Card())
 
 }

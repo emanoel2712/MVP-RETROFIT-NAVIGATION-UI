@@ -11,13 +11,9 @@ open class BaseActivity : AppCompatActivity() {
 
     private var mLoading: Loading? = null
 
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
     fun setupNavBar(titleIn: String, withBackBtn: Boolean, bgColorIn: Int, tvColorIn: Int) {
 
-        window.statusBarColor = bgColorIn
+        window.statusBarColor = (ContextCompat.getColor(this, bgColorIn))
         this.toolbar.visibility = View.VISIBLE
 
         this.toolbar.mTitle.text = titleIn

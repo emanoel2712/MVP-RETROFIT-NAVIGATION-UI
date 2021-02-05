@@ -41,19 +41,6 @@ class CardAdapter(private val contextIn: Context, private val cardListIn: List<C
                         )
                     )
                 }
-
-                2 -> {
-                    holder.nameCard.text = "Gatos"
-                    holder.ivCard.setImageResource(R.drawable.bg_main_menu)
-                }
-
-                3 -> {
-
-                }
-
-                4 -> {
-
-                }
             }
 
             holder.itemView.setOnClickListener {
