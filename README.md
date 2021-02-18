@@ -8,7 +8,7 @@ Retrofit, Gson, Okhttp, Picasso, Material Design, MeowBottomNavigation, Navigati
 # Coisas já feitas
 
 - Layout de algumas telas (ainda em construção), consumo de API de anime e algumas outras coisas. 
-Caso queira testar o APK, path: app\release
+Caso queira testar o APK, tá no caminho: app\release
 
 ![Screenshot_1612495369](https://user-images.githubusercontent.com/45019357/106986404-0e4b7880-674a-11eb-9ec6-9d55aaf70b81.png)
 ![Screenshot_1612495395](https://user-images.githubusercontent.com/45019357/106986528-4bb00600-674a-11eb-8d01-784870e458e9.png)
