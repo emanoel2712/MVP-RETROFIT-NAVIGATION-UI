@@ -1,13 +1,13 @@
 # UsingSomeAPis
 
-APP Android em desenvolvimento, será um app que irá consumir algumas API's. Padrão de arquitetura: MVP
+APP Android que consome a API Jikan, uma API de anime/mangá. Consome os Animes dessa API. Padrão de arquitetura: MVP
 
 # Tecnologias utilizadas por enquanto
 Retrofit, Gson, Okhttp, Picasso, Material Design, MeowBottomNavigation, Navigation-UI
 
-# Coisas já feitas
+# Coisas feitas
 
-- Layout de algumas telas (ainda em construção), consumo de API de anime e algumas outras coisas. 
+- Consumo de animes, o usuário pode pesquisar o seu anime favorito e ver os seus detalhes como mostrado nos prints abaixo.
 Caso queira testar o APK, tá no caminho: app\release
 
 ![Screenshot_1612495369](https://user-images.githubusercontent.com/45019357/106986404-0e4b7880-674a-11eb-9ec6-9d55aaf70b81.png)
